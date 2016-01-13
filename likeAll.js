@@ -1,15 +1,16 @@
-function startLikes() {
 
-	for (var initialVal = 0; document.getElementsByClassName('UFILikeLink')[initialVal]; initialVal++) { // 
+function getLikes() {
 	
-		if (document.getElementsByClassName('UFILikeLink')[initialVal].innerHtml === "Like") {
+	for (var startNode = 0; document.getElementsByClassName("UFILikeLink")[startNode]; startNode++) {
 		
-			document.getElementsByClassName('UFILikeLink')[initialVal].click();
+		if (document.getElementsByClassName("UFILikeLink")[startNode].innerHtml != "Unike") {
+			
+			document.getElementsByClassName("UFILikeLink")[startNode].click();
 			
 		}
 		
-		return "Liked All";
-		
 	}
-
-startLikes();
+	
+	console.log("Liked All"); // if you are putting it at one place you can use other notifiers like toaster etc
+	
+}
